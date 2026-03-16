@@ -13,45 +13,45 @@
 </p>
 
 <p align="center">
-  <img src="assets/divider-constellation.svg" width="100%" alt="divider" />
+  <img src="divider-constellation.svg" width="100%" alt="divider" />
 </p>
 
 <p align="center">
-  <img src="assets/identity-matrix.svg" width="100%" alt="Identity Statement" />
+  <img src="identity-matrix.svg" width="100%" alt="Identity Statement" />
 </p>
 
 <br/>
 
 <p align="center">
-  <img src="assets/system-overview.svg" width="100%" alt="System Overview" />
+  <img src="system-overview.svg" width="100%" alt="System Overview" />
 </p>
 
 <br/>
 
 <h2 align="center">
-  <img src="assets/section-header-tech.svg" width="100%" alt="Tech Constellation" />
+  <img src="section-header-tech.svg" width="100%" alt="Tech Constellation" />
 </h2>
 
 <p align="center">
-  <img src="assets/tech-stack-frontend.svg" width="100%" alt="Frontend Technologies" />
+  <img src="tech-stack-frontend.svg" width="100%" alt="Frontend Technologies" />
 </p>
 
 <p align="center">
-  <img src="assets/tech-stack-backend.svg" width="100%" alt="Backend Technologies" />
+  <img src="tech-stack-backend.svg" width="100%" alt="Backend Technologies" />
 </p>
 
 <p align="center">
-  <img src="assets/tech-stack-web3.svg" width="100%" alt="Web3 & Systems Technologies" />
+  <img src="tech-stack-web3.svg" width="100%" alt="Web3 & Systems Technologies" />
 </p>
 
 <p align="center">
-  <img src="assets/tech-stack-tools.svg" width="100%" alt="AI/ML & Design Tools" />
+  <img src="tech-stack-tools.svg" width="100%" alt="AI/ML & Design Tools" />
 </p>
 
 <br/>
 
 <h2 align="center">
-  <img src="assets/section-header-telemetry.svg" width="100%" alt="Live Telemetry" />
+  <img src="section-header-telemetry.svg" width="100%" alt="Live Telemetry" />
 </h2>
 
 <p align="center">
@@ -101,11 +101,11 @@
 <br/>
 
 <h2 align="center">
-  <img src="assets/section-header-signal.svg" width="100%" alt="Signal Transmission" />
+  <img src="section-header-signal.svg" width="100%" alt="Signal Transmission" />
 </h2>
 
 <p align="center">
-  <img src="assets/contact-nodes.svg" width="100%" alt="Contact Nodes" />
+  <img src="contact-nodes.svg" width="100%" alt="Contact Nodes" />
 </p>
 
 <p align="center">
