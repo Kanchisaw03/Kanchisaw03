@@ -79,15 +79,15 @@
 </h2>
 
 <p align="center">
-  <img src="assets/project-card-1.svg" width="100%" alt="Web3 DApp Platform" />
+  <img src="project-card-1.svg" width="100%" alt="Web3 DApp Platform" />
 </p>
 
 <p align="center">
-  <img src="assets/project-card-2.svg" width="100%" alt="Full-Stack SaaS" />
+  <img src="project-card-2.svg" width="100%" alt="Full-Stack SaaS" />
 </p>
 
 <p align="center">
-  <img src="assets/project-card-3.svg" width="100%" alt="Systems & Compilers" />
+  <img src="project-card-3.svg" width="100%" alt="Systems & Compilers" />
 </p>
 
 <br/>
@@ -125,7 +125,7 @@
 <br/>
 
 <p align="center">
-  <img src="assets/footer-signature.svg" width="100%" alt="System Signature" />
+  <img src="footer-signature.svg" width="100%" alt="System Signature" />
 </p>
 
 <p align="center">
