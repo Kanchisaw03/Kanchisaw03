@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%">
+  <defs>
+    <linearGradient id="w3Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+    <linearGradient id="w3Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#B8FFD4"/>
+      <stop offset="100%" style="stop-color:#98d4b8"/>
+    </linearGradient>
+    <filter id="w3Glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="url(#w3Bg)"/>
+  
+  <!-- Header -->
+  <rect x="20" y="15" width="280" height="40" rx="8" fill="#1a1a2e" stroke="url(#w3Grad)" stroke-width="2"/>
+  <text x="160" y="42" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="18" fill="#B8FFD4" font-weight="600">◈ WEB3 &amp; SYSTEMS</text>
+  
+  <!-- Connecting Line -->
+  <line x1="300" y1="35" x2="340" y2="100" stroke="#B8FFD4" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Tech Nodes -->
+  <g transform="translate(100, 130)" filter="url(#w3Glow)">
+    <circle r="38" fill="#1a1a2e" stroke="#B8FFD4" stroke-width="3">
+      <animate attributeName="stroke-opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <text y="6" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="16" fill="#B8FFD4" font-weight="bold">Solana</text>
+  </g>
+  
+  <g transform="translate(210, 130)" filter="url(#w3Glow)">
+    <circle r="38" fill="#1a1a2e" stroke="#B8FFD4" stroke-width="3">
+      <animate attributeName="stroke-opacity" values="0.6;1;0.6" dur="3.5s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
+    <text y="6" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="16" fill="#B8FFD4" font-weight="bold">Web3</text>
+  </g>
+  
+  <g transform="translate(320, 130)" filter="url(#w3Glow)">
+    <circle r="38" fill="#1a1a2e" stroke="#FFB8D4" stroke-width="3">
+      <animate attributeName="stroke-opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" begin="1s"/>
+    </circle>
+    <text y="6" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="16" fill="#FFB8D4" font-weight="bold">Rust</text>
+  </g>
+  
+  <g transform="translate(430, 130)" filter="url(#w3Glow)">
+    <circle r="38" fill="#1a1a2e" stroke="#FFB8D4" stroke-width="3">
+      <animate attributeName="stroke-opacity" values="0.6;1;0.6" dur="3.8s" repeatCount="indefinite" begin="1.5s"/>
+    </circle>
+    <text y="6" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="16" fill="#FFB8D4" font-weight="bold">C</text>
+  </g>
+  
+  <g transform="translate(540, 130)" filter="url(#w3Glow)">
+    <circle r="38" fill="#1a1a2e" stroke="#FFB8D4" stroke-width="3">
+      <animate attributeName="stroke-opacity" values="0.6;1;0.6" dur="3.2s" repeatCount="indefinite" begin="0.8s"/>
+    </circle>
+    <text y="6" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="16" fill="#FFB8D4" font-weight="bold">C++</text>
+  </g>
+  
+  <g transform="translate(650, 130)" filter="url(#w3Glow)">
+    <circle r="35" fill="#1a1a2e" stroke="#FFB8D4" stroke-width="2">
+      <animate attributeName="stroke-opacity" values="0.5;0.9;0.5" dur="4.2s" repeatCount="indefinite" begin="2s"/>
+    </circle>
+    <text y="6" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="14" fill="#FFB8D4">Java</text>
+  </g>
+  
+  <g transform="translate(745, 130)" filter="url(#w3Glow)">
+    <circle r="32" fill="#1a1a2e" stroke="#B8FFD4" stroke-width="2">
+      <animate attributeName="stroke-opacity" values="0.5;0.9;0.5" dur="3.6s" repeatCount="indefinite" begin="1.2s"/>
+    </circle>
+    <text y="6" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="12" fill="#B8FFD4">AWS</text>
+  </g>
+  
+  <!-- Connection Lines -->
+  <g stroke="#B8FFD4" stroke-width="1.5" opacity="0.25">
+    <line x1="138" y1="130" x2="172" y2="130"/>
+    <line x1="248" y1="130" x2="282" y2="130"/>
+  </g>
+  <g stroke="#FFB8D4" stroke-width="1.5" opacity="0.25">
+    <line x1="358" y1="130" x2="392" y2="130"/>
+    <line x1="468" y1="130" x2="502" y2="130"/>
+    <line x1="578" y1="130" x2="615" y2="130"/>
+    <line x1="685" y1="130" x2="713" y2="130"/>
+  </g>
+</svg>
