@@ -1,198 +1,677 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" width="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%">
   <defs>
+    <!-- Cosmic Background Gradient -->
     <linearGradient id="cosmicGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0d0d1a">
-        <animate attributeName="stop-color" values="#0d0d1a;#1a1a2e;#16213e;#0d0d1a" dur="12s" repeatCount="indefinite"/>
+      <stop offset="0%" style="stop-color:#0a0a12">
+        <animate attributeName="stop-color" values="#0a0a12;#12101f;#0f1218;#0a0a12" dur="20s" repeatCount="indefinite"/>
       </stop>
-      <stop offset="50%" style="stop-color:#1a1a2e">
-        <animate attributeName="stop-color" values="#1a1a2e;#2d1f3d;#1a1a2e;#16213e" dur="12s" repeatCount="indefinite"/>
+      <stop offset="35%" style="stop-color:#12101f">
+        <animate attributeName="stop-color" values="#12101f;#1a1528;#12101f;#0f1218" dur="20s" repeatCount="indefinite"/>
       </stop>
-      <stop offset="100%" style="stop-color:#16213e">
-        <animate attributeName="stop-color" values="#16213e;#0d0d1a;#2d1f3d;#16213e" dur="12s" repeatCount="indefinite"/>
+      <stop offset="65%" style="stop-color:#0f1218">
+        <animate attributeName="stop-color" values="#0f1218;#12101f;#1a1528;#0f1218" dur="20s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#0d0d16">
+        <animate attributeName="stop-color" values="#0d0d16;#0a0a12;#12101f;#0d0d16" dur="20s" repeatCount="indefinite"/>
       </stop>
     </linearGradient>
     
-    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+    <!-- Nebula Gradient 1 -->
+    <radialGradient id="nebula1" cx="30%" cy="40%" r="60%">
+      <stop offset="0%" style="stop-color:#E6B8FF;stop-opacity:0.15">
+        <animate attributeName="stop-opacity" values="0.08;0.18;0.08" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="40%" style="stop-color:#c49ee0;stop-opacity:0.08">
+        <animate attributeName="stop-opacity" values="0.05;0.12;0.05" dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#E6B8FF;stop-opacity:0"/>
+    </radialGradient>
+    
+    <!-- Nebula Gradient 2 -->
+    <radialGradient id="nebula2" cx="70%" cy="60%" r="55%">
+      <stop offset="0%" style="stop-color:#FFB8D4;stop-opacity:0.12">
+        <animate attributeName="stop-opacity" values="0.06;0.15;0.06" dur="12s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="45%" style="stop-color:#e0a0b8;stop-opacity:0.06">
+        <animate attributeName="stop-opacity" values="0.03;0.1;0.03" dur="9s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#FFB8D4;stop-opacity:0"/>
+    </radialGradient>
+    
+    <!-- Nebula Gradient 3 -->
+    <radialGradient id="nebula3" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" style="stop-color:#B8D4FF;stop-opacity:0.1">
+        <animate attributeName="stop-opacity" values="0.05;0.12;0.05" dur="15s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" style="stop-color:#9cb8e0;stop-opacity:0.05"/>
+      <stop offset="100%" style="stop-color:#B8D4FF;stop-opacity:0"/>
+    </radialGradient>
+    
+    <!-- Aurora Wave Gradient -->
+    <linearGradient id="auroraGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E6B8FF;stop-opacity:0.08">
+        <animate attributeName="stop-opacity" values="0.05;0.15;0.05" dur="6s" repeatCount="indefinite"/>
+        <animate attributeName="stop-color" values="#E6B8FF;#B8D4FF;#E6B8FF" dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="30%" style="stop-color:#FFB8D4;stop-opacity:0.12">
+        <animate attributeName="stop-opacity" values="0.08;0.2;0.08" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="60%" style="stop-color:#B8D4FF;stop-opacity:0.1">
+        <animate attributeName="stop-opacity" values="0.06;0.15;0.06" dur="7s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#E6B8FF;stop-opacity:0.06">
+        <animate attributeName="stop-color" values="#E6B8FF;#FFB8D4;#E6B8FF" dur="12s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <!-- Name Text Gradient -->
+    <linearGradient id="nameGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E6B8FF">
+        <animate attributeName="stop-color" values="#E6B8FF;#FFB8D4;#B8D4FF;#FFD4E6;#E6B8FF" dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="25%" style="stop-color:#FFB8D4">
+        <animate attributeName="stop-color" values="#FFB8D4;#B8D4FF;#E6B8FF;#B8FFD4;#FFB8D4" dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" style="stop-color:#B8D4FF">
+        <animate attributeName="stop-color" values="#B8D4FF;#E6B8FF;#FFB8D4;#E6B8FF;#B8D4FF" dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="75%" style="stop-color:#FFD4E6">
+        <animate attributeName="stop-color" values="#FFD4E6;#E6B8FF;#B8D4FF;#FFB8D4;#FFD4E6" dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#B8FFD4">
+        <animate attributeName="stop-color" values="#B8FFD4;#FFB8D4;#E6B8FF;#B8D4FF;#B8FFD4" dur="10s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <!-- Center Glow -->
+    <radialGradient id="centerGlow" cx="50%" cy="45%" r="40%">
+      <stop offset="0%" style="stop-color:#E6B8FF;stop-opacity:0.25">
+        <animate attributeName="stop-opacity" values="0.15;0.3;0.15" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" style="stop-color:#FFB8D4;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#B8D4FF;stop-opacity:0"/>
+    </radialGradient>
+    
+    <!-- Filters -->
+    <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
       <feMerge>
+        <feMergeNode in="coloredBlur"/>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
     
-    <filter id="starGlow" x="-100%" y="-100%" width="300%" height="300%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
+    <filter id="dreamyGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="blur1"/>
+      <feGaussianBlur stdDeviation="8" result="blur2"/>
       <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="starGlow" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="2" result="blur1"/>
+      <feGaussianBlur stdDeviation="4" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="ultraGlow" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="blur" in2="SourceGraphic" operator="over"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
         <feMergeNode in="blur"/>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
     
-    <linearGradient id="auroraGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#E6B8FF;stop-opacity:0.15">
-        <animate attributeName="stop-opacity" values="0.1;0.25;0.1" dur="8s" repeatCount="indefinite"/>
-      </stop>
-      <stop offset="50%" style="stop-color:#FFB8D4;stop-opacity:0.2">
-        <animate attributeName="stop-opacity" values="0.15;0.3;0.15" dur="6s" repeatCount="indefinite"/>
-      </stop>
-      <stop offset="100%" style="stop-color:#B8D4FF;stop-opacity:0.15">
-        <animate attributeName="stop-opacity" values="0.1;0.25;0.1" dur="10s" repeatCount="indefinite"/>
-      </stop>
-    </linearGradient>
+    <!-- Geometric Pattern -->
+    <pattern id="gridPattern" width="60" height="60" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="60" y2="0" stroke="#E6B8FF" stroke-width="0.3" opacity="0.05"/>
+      <line x1="0" y1="0" x2="0" y2="60" stroke="#E6B8FF" stroke-width="0.3" opacity="0.05"/>
+    </pattern>
     
-    <linearGradient id="nameGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#E6B8FF">
-        <animate attributeName="stop-color" values="#E6B8FF;#FFB8D4;#B8D4FF;#E6B8FF" dur="8s" repeatCount="indefinite"/>
-      </stop>
-      <stop offset="50%" style="stop-color:#FFB8D4">
-        <animate attributeName="stop-color" values="#FFB8D4;#B8D4FF;#E6B8FF;#FFB8D4" dur="8s" repeatCount="indefinite"/>
-      </stop>
-      <stop offset="100%" style="stop-color:#B8D4FF">
-        <animate attributeName="stop-color" values="#B8D4FF;#E6B8FF;#FFB8D4;#B8D4FF" dur="8s" repeatCount="indefinite"/>
-      </stop>
-    </linearGradient>
+    <!-- Orbit Paths -->
+    <path id="orbitPath1" d="M 400 280 A 320 130 0 1 1 400 281 Z" fill="none"/>
+    <path id="orbitPath2" d="M 400 280 A 280 100 0 1 0 400 281 Z" fill="none"/>
+    <path id="orbitPath3" d="M 400 280 A 380 160 0 1 1 400 281 Z" fill="none"/>
+    <path id="orbitPath4" d="M 400 280 A 200 80 0 1 0 400 281 Z" fill="none"/>
     
-    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" style="stop-color:#E6B8FF;stop-opacity:0.2"/>
-      <stop offset="100%" style="stop-color:#E6B8FF;stop-opacity:0"/>
-    </radialGradient>
+    <!-- Floating Shapes Gradient -->
+    <linearGradient id="shapeGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E6B8FF;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#E6B8FF;stop-opacity:0.1"/>
+    </linearGradient>
+    <linearGradient id="shapeGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFB8D4;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#FFB8D4;stop-opacity:0.1"/>
+    </linearGradient>
+    <linearGradient id="shapeGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#B8D4FF;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#B8D4FF;stop-opacity:0.1"/>
+    </linearGradient>
   </defs>
   
-  <!-- Background -->
+  <!-- ═══════════════════════════════════════════════════════════════
+       BACKGROUND LAYERS
+       ═══════════════════════════════════════════════════════════════ -->
+  
+  <!-- Base Background -->
   <rect width="100%" height="100%" fill="url(#cosmicGradient)"/>
   
-  <!-- Aurora Effect -->
-  <ellipse cx="400" cy="650" rx="600" ry="400" fill="url(#auroraGrad)">
-    <animate attributeName="rx" values="600;700;600" dur="15s" repeatCount="indefinite"/>
+  <!-- Subtle Grid -->
+  <rect width="100%" height="100%" fill="url(#gridPattern)" opacity="0.3">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="10s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Nebula Layers -->
+  <ellipse cx="200" cy="200" rx="400" ry="300" fill="url(#nebula1)">
+    <animate attributeName="cx" values="200;250;200" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="200;180;200" dur="25s" repeatCount="indefinite"/>
   </ellipse>
   
-  <!-- Center Glow -->
-  <ellipse cx="400" cy="240" rx="350" ry="180" fill="url(#centerGlow)">
-    <animate attributeName="rx" values="350;400;350" dur="10s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.5;0.8;0.5" dur="8s" repeatCount="indefinite"/>
+  <ellipse cx="600" cy="400" rx="350" ry="250" fill="url(#nebula2)">
+    <animate attributeName="cx" values="600;550;600" dur="28s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="400;420;400" dur="22s" repeatCount="indefinite"/>
   </ellipse>
   
-  <!-- Stars -->
-  <g fill="#ffffff" filter="url(#starGlow)">
-    <circle cx="80" cy="60" r="2.5">
-      <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/>
+  <ellipse cx="400" cy="150" rx="300" ry="200" fill="url(#nebula3)">
+    <animate attributeName="rx" values="300;350;300" dur="20s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- Aurora Waves -->
+  <path d="M 0 400 Q 200 350 400 380 T 800 360 L 800 600 L 0 600 Z" fill="url(#auroraGrad)" opacity="0.6">
+    <animate attributeName="d" 
+      values="M 0 400 Q 200 350 400 380 T 800 360 L 800 600 L 0 600 Z;
+              M 0 380 Q 200 420 400 360 T 800 400 L 800 600 L 0 600 Z;
+              M 0 400 Q 200 350 400 380 T 800 360 L 800 600 L 0 600 Z" 
+      dur="15s" repeatCount="indefinite"/>
+  </path>
+  
+  <path d="M 0 450 Q 250 400 500 430 T 800 410 L 800 600 L 0 600 Z" fill="url(#auroraGrad)" opacity="0.4">
+    <animate attributeName="d" 
+      values="M 0 450 Q 250 400 500 430 T 800 410 L 800 600 L 0 600 Z;
+              M 0 430 Q 250 470 500 400 T 800 450 L 800 600 L 0 600 Z;
+              M 0 450 Q 250 400 500 430 T 800 410 L 800 600 L 0 600 Z" 
+      dur="18s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Center Glow Effect -->
+  <ellipse cx="400" cy="260" rx="300" ry="180" fill="url(#centerGlow)">
+    <animate attributeName="rx" values="300;350;300" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="180;200;180" dur="10s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- ═══════════════════════════════════════════════════════════════
+       STAR FIELD - LAYER 1 (Distant)
+       ═══════════════════════════════════════════════════════════════ -->
+  
+  <g fill="#ffffff" opacity="0.6">
+    <!-- Tiny distant stars -->
+    <circle cx="45" cy="35" r="0.8"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="120" cy="80" r="0.6"><animate attributeName="opacity" values="0.4;0.9;0.4" dur="3s" repeatCount="indefinite" begin="0.5s"/></circle>
+    <circle cx="190" cy="45" r="0.7"><animate attributeName="opacity" values="0.3;0.7;0.3" dur="5s" repeatCount="indefinite" begin="1s"/></circle>
+    <circle cx="280" cy="90" r="0.5"><animate attributeName="opacity" values="0.4;0.8;0.4" dur="4.5s" repeatCount="indefinite" begin="0.3s"/></circle>
+    <circle cx="340" cy="30" r="0.8"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="3.5s" repeatCount="indefinite" begin="1.5s"/></circle>
+    <circle cx="420" cy="70" r="0.6"><animate attributeName="opacity" values="0.4;0.7;0.4" dur="4s" repeatCount="indefinite" begin="0.8s"/></circle>
+    <circle cx="500" cy="25" r="0.7"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="5.5s" repeatCount="indefinite" begin="0.2s"/></circle>
+    <circle cx="580" cy="85" r="0.5"><animate attributeName="opacity" values="0.4;0.9;0.4" dur="3.8s" repeatCount="indefinite" begin="1.2s"/></circle>
+    <circle cx="650" cy="40" r="0.8"><animate attributeName="opacity" values="0.3;0.7;0.3" dur="4.2s" repeatCount="indefinite" begin="0.6s"/></circle>
+    <circle cx="720" cy="95" r="0.6"><animate attributeName="opacity" values="0.4;0.8;0.4" dur="3.2s" repeatCount="indefinite" begin="1.8s"/></circle>
+    <circle cx="760" cy="55" r="0.7"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="4.8s" repeatCount="indefinite" begin="0.4s"/></circle>
+    
+    <!-- More scattered -->
+    <circle cx="60" cy="520" r="0.6"><animate attributeName="opacity" values="0.3;0.7;0.3" dur="4s" repeatCount="indefinite" begin="2s"/></circle>
+    <circle cx="150" cy="480" r="0.8"><animate attributeName="opacity" values="0.4;0.8;0.4" dur="3.5s" repeatCount="indefinite" begin="0.7s"/></circle>
+    <circle cx="680" cy="500" r="0.7"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="4.5s" repeatCount="indefinite" begin="1.3s"/></circle>
+    <circle cx="750" cy="540" r="0.5"><animate attributeName="opacity" values="0.4;0.7;0.4" dur="3.8s" repeatCount="indefinite" begin="0.9s"/></circle>
+  </g>
+  
+  <!-- ═══════════════════════════════════════════════════════════════
+       STAR FIELD - LAYER 2 (Medium)
+       ═══════════════════════════════════════════════════════════════ -->
+  
+  <g filter="url(#starGlow)">
+    <!-- White stars -->
+    <circle cx="80" cy="120" r="1.5" fill="#ffffff">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="1.5;2;1.5" dur="3s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="200" cy="100" r="2">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="4s" repeatCount="indefinite" begin="0.5s"/>
+    <circle cx="320" cy="60" r="1.8" fill="#ffffff">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="4s" repeatCount="indefinite" begin="1s"/>
+      <animate attributeName="r" values="1.8;2.3;1.8" dur="4s" repeatCount="indefinite" begin="1s"/>
     </circle>
-    <circle cx="350" cy="50" r="2.5">
-      <animate attributeName="opacity" values="0.4;1;0.4" dur="3.5s" repeatCount="indefinite" begin="1s"/>
+    <circle cx="550" cy="100" r="1.5" fill="#ffffff">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="3.5s" repeatCount="indefinite" begin="0.5s"/>
     </circle>
-    <circle cx="500" cy="80" r="2">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="4s" repeatCount="indefinite" begin="0.3s"/>
+    <circle cx="720" cy="70" r="1.8" fill="#ffffff">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="4.5s" repeatCount="indefinite" begin="1.5s"/>
+      <animate attributeName="r" values="1.8;2.2;1.8" dur="4.5s" repeatCount="indefinite" begin="1.5s"/>
     </circle>
-    <circle cx="650" cy="45" r="2.5">
-      <animate attributeName="opacity" values="0.4;1;0.4" dur="3.2s" repeatCount="indefinite" begin="1.5s"/>
-    </circle>
-    <circle cx="720" cy="110" r="2">
+    <circle cx="160" cy="530" r="1.5" fill="#ffffff">
       <animate attributeName="opacity" values="0.5;1;0.5" dur="3.8s" repeatCount="indefinite" begin="0.8s"/>
     </circle>
-    <circle cx="100" cy="450" r="2.5">
-      <animate attributeName="opacity" values="0.4;1;0.4" dur="4.2s" repeatCount="indefinite" begin="0.6s"/>
-    </circle>
-    <circle cx="700" cy="470" r="2">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="3.6s" repeatCount="indefinite" begin="1.2s"/>
+    <circle cx="640" cy="520" r="1.8" fill="#ffffff">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="4.2s" repeatCount="indefinite" begin="1.2s"/>
     </circle>
   </g>
   
-  <!-- Colored Stars -->
-  <g filter="url(#starGlow)">
-    <circle cx="150" cy="150" r="3" fill="#E6B8FF">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="5s" repeatCount="indefinite"/>
-      <animate attributeName="r" values="3;4;3" dur="5s" repeatCount="indefinite"/>
+  <!-- ═══════════════════════════════════════════════════════════════
+       STAR FIELD - LAYER 3 (Colored Feature Stars)
+       ═══════════════════════════════════════════════════════════════ -->
+  
+  <g filter="url(#ultraGlow)">
+    <!-- Lavender stars -->
+    <circle cx="100" cy="180" r="2.5" fill="#E6B8FF">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="2.5;3.5;2.5" dur="5s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="600" cy="130" r="3" fill="#FFB8D4">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="4.5s" repeatCount="indefinite" begin="1s"/>
-      <animate attributeName="r" values="3;4;3" dur="4.5s" repeatCount="indefinite" begin="1s"/>
+    <circle cx="700" cy="150" r="2" fill="#E6B8FF">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="6s" repeatCount="indefinite" begin="2s"/>
+      <animate attributeName="r" values="2;3;2" dur="6s" repeatCount="indefinite" begin="2s"/>
     </circle>
-    <circle cx="250" cy="470" r="3" fill="#B8D4FF">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="5.5s" repeatCount="indefinite" begin="0.5s"/>
-      <animate attributeName="r" values="3;4;3" dur="5.5s" repeatCount="indefinite" begin="0.5s"/>
+    
+    <!-- Pink stars -->
+    <circle cx="180" cy="100" r="2.5" fill="#FFB8D4">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="5.5s" repeatCount="indefinite" begin="1s"/>
+      <animate attributeName="r" values="2.5;3.5;2.5" dur="5.5s" repeatCount="indefinite" begin="1s"/>
     </circle>
-    <circle cx="550" cy="450" r="3" fill="#E6B8FF">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="4.8s" repeatCount="indefinite" begin="1.5s"/>
-      <animate attributeName="r" values="3;4;3" dur="4.8s" repeatCount="indefinite" begin="1.5s"/>
+    <circle cx="620" cy="80" r="2" fill="#FFB8D4">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="4.5s" repeatCount="indefinite" begin="0.5s"/>
+      <animate attributeName="r" values="2;2.8;2" dur="4.5s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
+    
+    <!-- Blue stars -->
+    <circle cx="250" cy="140" r="2" fill="#B8D4FF">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="6.5s" repeatCount="indefinite" begin="1.5s"/>
+      <animate attributeName="r" values="2;3;2" dur="6.5s" repeatCount="indefinite" begin="1.5s"/>
+    </circle>
+    <circle cx="550" cy="55" r="2.5" fill="#B8D4FF">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="5s" repeatCount="indefinite" begin="0.8s"/>
+      <animate attributeName="r" values="2.5;3.2;2.5" dur="5s" repeatCount="indefinite" begin="0.8s"/>
+    </circle>
+    
+    <!-- Mint/green accent stars -->
+    <circle cx="380" cy="50" r="1.8" fill="#B8FFD4">
+      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="7s" repeatCount="indefinite" begin="2.5s"/>
+      <animate attributeName="r" values="1.8;2.5;1.8" dur="7s" repeatCount="indefinite" begin="2.5s"/>
+    </circle>
+    
+    <!-- Bottom colored stars -->
+    <circle cx="120" cy="480" r="2.5" fill="#E6B8FF">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="5.5s" repeatCount="indefinite" begin="1.8s"/>
+      <animate attributeName="r" values="2.5;3.2;2.5" dur="5.5s" repeatCount="indefinite" begin="1.8s"/>
+    </circle>
+    <circle cx="680" cy="490" r="2" fill="#FFB8D4">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="4.8s" repeatCount="indefinite" begin="0.3s"/>
+      <animate attributeName="r" values="2;2.8;2" dur="4.8s" repeatCount="indefinite" begin="0.3s"/>
+    </circle>
+    <circle cx="400" cy="560" r="2" fill="#B8D4FF">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="6s" repeatCount="indefinite" begin="1.2s"/>
     </circle>
   </g>
   
-  <!-- Orbiting Particles -->
-  <circle r="4" fill="#FFB8D4" filter="url(#starGlow)">
-    <animateMotion dur="25s" repeatCount="indefinite">
-      <mpath href="#orbitPath"/>
+  <!-- ═══════════════════════════════════════════════════════════════
+       CONSTELLATION LINES
+       ═══════════════════════════════════════════════════════════════ -->
+  
+  <g stroke="#E6B8FF" stroke-width="0.5" fill="none" opacity="0.15">
+    <!-- Left constellation -->
+    <path d="M 100 180 L 180 100 L 250 140">
+      <animate attributeName="opacity" values="0.1;0.25;0.1" dur="8s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 180 100 L 80 120">
+      <animate attributeName="opacity" values="0.1;0.2;0.1" dur="10s" repeatCount="indefinite" begin="2s"/>
+    </path>
+    
+    <!-- Right constellation -->
+    <path d="M 550 55 L 620 80 L 700 150">
+      <animate attributeName="opacity" values="0.1;0.25;0.1" dur="9s" repeatCount="indefinite" begin="1s"/>
+    </path>
+    <path d="M 620 80 L 720 70">
+      <animate attributeName="opacity" values="0.1;0.2;0.1" dur="7s" repeatCount="indefinite" begin="3s"/>
+    </path>
+    
+    <!-- Center hint -->
+    <path d="M 320 60 L 380 50 L 420 70">
+      <animate attributeName="opacity" values="0.05;0.15;0.05" dur="12s" repeatCount="indefinite" begin="2s"/>
+    </path>
+  </g>
+  
+  <!-- ═══════════════════════════════════════════════════════════════
+       FLOATING GEOMETRIC SHAPES
+       ═══════════════════════════════════════════════════════════════ -->
+  
+  <!-- Floating Diamond 1 -->
+  <g transform="translate(120, 350)" filter="url(#dreamyGlow)">
+    <polygon points="0,-15 10,0 0,15 -10,0" fill="none" stroke="url(#shapeGrad1)" stroke-width="1">
+      <animateTransform attributeName="transform" type="rotate" values="0;360" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="6s" repeatCount="indefinite"/>
+    </polygon>
+    <animateTransform attributeName="transform" type="translate" values="120,350;125,340;120,350" dur="8s" repeatCount="indefinite" additive="replace"/>
+  </g>
+  
+  <!-- Floating Diamond 2 -->
+  <g transform="translate(680, 380)" filter="url(#dreamyGlow)">
+    <polygon points="0,-12 8,0 0,12 -8,0" fill="none" stroke="url(#shapeGrad2)" stroke-width="1">
+      <animateTransform attributeName="transform" type="rotate" values="360;0" dur="25s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="7s" repeatCount="indefinite"/>
+    </polygon>
+    <animateTransform attributeName="transform" type="translate" values="680,380;675,390;680,380" dur="10s" repeatCount="indefinite" additive="replace"/>
+  </g>
+  
+  <!-- Floating Triangle 1 -->
+  <g transform="translate(60, 250)" filter="url(#dreamyGlow)">
+    <polygon points="0,-10 9,6 -9,6" fill="none" stroke="url(#shapeGrad3)" stroke-width="0.8">
+      <animateTransform attributeName="transform" type="rotate" values="0;360" dur="30s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.5;0.2" dur="8s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+  
+  <!-- Floating Triangle 2 -->
+  <g transform="translate(740, 280)" filter="url(#dreamyGlow)">
+    <polygon points="0,-12 10,7 -10,7" fill="none" stroke="url(#shapeGrad1)" stroke-width="0.8">
+      <animateTransform attributeName="transform" type="rotate" values="360;0" dur="35s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.25;0.55;0.25" dur="9s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+  
+  <!-- Floating Circle Ring -->
+  <g transform="translate(50, 450)" filter="url(#dreamyGlow)">
+    <circle r="10" fill="none" stroke="url(#shapeGrad2)" stroke-width="0.8">
+      <animate attributeName="r" values="10;14;10" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.5;0.2" dur="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <g transform="translate(750, 450)" filter="url(#dreamyGlow)">
+    <circle r="8" fill="none" stroke="url(#shapeGrad3)" stroke-width="0.8">
+      <animate attributeName="r" values="8;12;8" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.25;0.5;0.25" dur="7s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- ═══════════════════════════════════════════════════════════════
+       ORBITING PARTICLES
+       ═══════════════════════════════════════════════════════════════ -->
+  
+  <!-- Orbit 1 - Main -->
+  <circle r="4" fill="#FFB8D4" filter="url(#ultraGlow)">
+    <animateMotion dur="30s" repeatCount="indefinite">
+      <mpath href="#orbitPath1"/>
     </animateMotion>
-    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="25s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="30s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="4;5;4" dur="30s" repeatCount="indefinite"/>
   </circle>
-  <path id="orbitPath" d="M 400 240 A 300 120 0 1 1 400 241 Z" fill="none"/>
   
-  <!-- Wave Emoji -->
-  <text x="400" y="95" text-anchor="middle" font-size="50" opacity="0">
-    <animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
-    👋
-  </text>
+  <!-- Orbit 2 - Counter -->
+  <circle r="3" fill="#B8D4FF" filter="url(#ultraGlow)">
+    <animateMotion dur="25s" repeatCount="indefinite">
+      <mpath href="#orbitPath2"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="25s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Orbit 3 - Outer -->
+  <circle r="2.5" fill="#E6B8FF" filter="url(#starGlow)">
+    <animateMotion dur="40s" repeatCount="indefinite">
+      <mpath href="#orbitPath3"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="40s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Orbit 4 - Inner fast -->
+  <circle r="2" fill="#B8FFD4" filter="url(#starGlow)">
+    <animateMotion dur="18s" repeatCount="indefinite">
+      <mpath href="#orbitPath4"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0.4;0.85;0.4" dur="18s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Additional trailing particles on orbit 1 -->
+  <circle r="2" fill="#FFB8D4" filter="url(#starGlow)" opacity="0.5">
+    <animateMotion dur="30s" repeatCount="indefinite" begin="-5s">
+      <mpath href="#orbitPath1"/>
+    </animateMotion>
+  </circle>
+  <circle r="1.5" fill="#FFB8D4" filter="url(#starGlow)" opacity="0.3">
+    <animateMotion dur="30s" repeatCount="indefinite" begin="-10s">
+      <mpath href="#orbitPath1"/>
+    </animateMotion>
+  </circle>
+  
+  <!-- ═══════════════════════════════════════════════════════════════
+       FLOATING PARTICLES (Dust)
+       ═══════════════════════════════════════════════════════════════ -->
+  
+  <g filter="url(#starGlow)" opacity="0.6">
+    <!-- Rising particles -->
+    <circle r="1.5" fill="#E6B8FF">
+      <animate attributeName="cy" values="550;100;550" dur="25s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="150;180;150" dur="25s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.7;0.7;0" dur="25s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="1" fill="#FFB8D4">
+      <animate attributeName="cy" values="580;80;580" dur="30s" repeatCount="indefinite" begin="5s"/>
+      <animate attributeName="cx" values="300;280;300" dur="30s" repeatCount="indefinite" begin="5s"/>
+      <animate attributeName="opacity" values="0;0.6;0.6;0" dur="30s" repeatCount="indefinite" begin="5s"/>
+    </circle>
+    <circle r="1.2" fill="#B8D4FF">
+      <animate attributeName="cy" values="560;120;560" dur="28s" repeatCount="indefinite" begin="10s"/>
+      <animate attributeName="cx" values="500;520;500" dur="28s" repeatCount="indefinite" begin="10s"/>
+      <animate attributeName="opacity" values="0;0.7;0.7;0" dur="28s" repeatCount="indefinite" begin="10s"/>
+    </circle>
+    <circle r="1" fill="#E6B8FF">
+      <animate attributeName="cy" values="570;90;570" dur="32s" repeatCount="indefinite" begin="15s"/>
+      <animate attributeName="cx" values="650;630;650" dur="32s" repeatCount="indefinite" begin="15s"/>
+      <animate attributeName="opacity" values="0;0.6;0.6;0" dur="32s" repeatCount="indefinite" begin="15s"/>
+    </circle>
+  </g>
+  
+  <!-- ═══════════════════════════════════════════════════════════════
+       ENERGY LINES / LIGHT STREAMS
+       ═══════════════════════════════════════════════════════════════ -->
+  
+  <g opacity="0.15">
+    <!-- Diagonal light beam 1 -->
+    <line x1="-50" y1="200" x2="200" y2="600" stroke="url(#nameGradient)" stroke-width="80">
+      <animate attributeName="opacity" values="0;0.1;0" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="x1" values="-50;100;-50" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="200;350;200" dur="8s" repeatCount="indefinite"/>
+    </line>
+    
+    <!-- Diagonal light beam 2 -->
+    <line x1="600" y1="-50" x2="850" y2="400" stroke="url(#nameGradient)" stroke-width="60">
+      <animate attributeName="opacity" values="0;0.08;0" dur="10s" repeatCount="indefinite" begin="4s"/>
+      <animate attributeName="x1" values="600;500;600" dur="10s" repeatCount="indefinite" begin="4s"/>
+      <animate attributeName="x2" values="850;750;850" dur="10s" repeatCount="indefinite" begin="4s"/>
+    </line>
+  </g>
+  
+  <!-- ═══════════════════════════════════════════════════════════════
+       MAIN TEXT CONTENT
+       ═══════════════════════════════════════════════════════════════ -->
   
   <!-- Greeting Text -->
-  <text x="400" y="150" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="32" fill="#B8D4FF" letter-spacing="2" opacity="0">
-    <animate attributeName="opacity" values="0;0.9" dur="1.5s" fill="freeze"/>
-    Hi there, I'm
+  <text x="400" y="130" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="28" fill="#B8D4FF" letter-spacing="3" opacity="0" filter="url(#dreamyGlow)">
+    <animate attributeName="opacity" values="0;0;0.9" dur="2s" fill="freeze"/>
+    <animate attributeName="y" values="140;130" dur="2s" fill="freeze"/>
+    Hello, I'm
   </text>
   
   <!-- Main Name -->
-  <text x="400" y="220" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="80" font-weight="300" fill="url(#nameGradient)" filter="url(#softGlow)" letter-spacing="6">
-    <animate attributeName="opacity" values="0;1" dur="2s" fill="freeze"/>
+  <text x="400" y="210" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="85" font-weight="200" fill="url(#nameGradient)" filter="url(#softGlow)" letter-spacing="8" opacity="0">
+    <animate attributeName="opacity" values="0;0;1" dur="2.5s" fill="freeze"/>
+    <animate attributeName="letter-spacing" values="20;8" dur="2.5s" fill="freeze"/>
     KANCHI SAW
   </text>
   
-  <!-- Subtitle -->
-  <text x="400" y="290" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="26" fill="#E6B8FF" letter-spacing="4" opacity="0">
-    <animate attributeName="opacity" values="0;0;0.9" dur="3s" fill="freeze"/>
+  <!-- Decorative line under name -->
+  <line x1="200" y1="235" x2="200" y2="235" stroke="url(#nameGradient)" stroke-width="1" opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0.6" dur="3s" fill="freeze"/>
+    <animate attributeName="x2" values="200;600" dur="1.5s" begin="2.5s" fill="freeze"/>
+  </line>
+  
+  <!-- Role Title -->
+  <text x="400" y="280" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="26" fill="#E6B8FF" letter-spacing="6" opacity="0" filter="url(#dreamyGlow)">
+    <animate attributeName="opacity" values="0;0;0;0.95" dur="3.5s" fill="freeze"/>
     FULL-STACK DEVELOPER
   </text>
   
-  <text x="400" y="330" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="22" fill="#FFB8D4" letter-spacing="3" opacity="0">
-    <animate attributeName="opacity" values="0;0;0.85" dur="3.5s" fill="freeze"/>
-    Web3 Builder • Systems Programmer
+  <!-- Subtitle -->
+  <text x="400" y="320" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="20" fill="#FFB8D4" letter-spacing="3" opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0;0.85" dur="4s" fill="freeze"/>
+    Web3 Builder • Systems Programmer • Rust Enthusiast
   </text>
   
   <!-- Location -->
-  <text x="400" y="375" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="18" fill="#6e7681" letter-spacing="2" opacity="0">
-    <animate attributeName="opacity" values="0;0;0;0.7" dur="4s" fill="freeze"/>
-    📍 India
-  </text>
-  
-  <!-- Current Focus Box -->
   <g opacity="0">
-    <animate attributeName="opacity" values="0;0;0;0;0.9" dur="4.5s" fill="freeze"/>
-    <rect x="200" y="400" width="400" height="90" rx="12" fill="#1a1a2e" stroke="#E6B8FF" stroke-width="1" opacity="0.8">
-      <animate attributeName="stroke-opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite"/>
-    </rect>
-    <text x="400" y="430" text-anchor="middle" font-family="'Courier New', monospace" font-size="14" fill="#6bcb77">
-      🔭 CURRENTLY BUILDING
-    </text>
-    <text x="400" y="460" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="20" fill="#E6B8FF" font-weight="600">
-      Web3 Projects on Solana
-    </text>
-    <text x="400" y="482" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="14" fill="#6e7681">
-      🌱 Learning Solana Web3 Development
+    <animate attributeName="opacity" values="0;0;0;0;0;0.7" dur="4.5s" fill="freeze"/>
+    <text x="400" y="360" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="#6e7681" letter-spacing="2">
+      📍 India
     </text>
   </g>
   
-  <!-- Bottom Decorative Lines -->
-  <line x1="150" y1="510" x2="350" y2="510" stroke="url(#nameGradient)" stroke-width="2" opacity="0">
-    <animate attributeName="opacity" values="0;0;0;0;0.5" dur="5s" fill="freeze"/>
-  </line>
-  <line x1="450" y1="510" x2="650" y2="510" stroke="url(#nameGradient)" stroke-width="2" opacity="0">
-    <animate attributeName="opacity" values="0;0;0;0;0.5" dur="5s" fill="freeze"/>
-  </line>
+  <!-- ═══════════════════════════════════════════════════════════════
+       CURRENT FOCUS BOX
+       ═══════════════════════════════════════════════════════════════ -->
   
-  <!-- Central Diamond -->
-  <polygon points="400,500 418,518 400,536 382,518" fill="none" stroke="#FFB8D4" stroke-width="2" opacity="0">
-    <animate attributeName="opacity" values="0;0;0;0;0.7" dur="5s" fill="freeze"/>
-    <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite" begin="5s"/>
-  </polygon>
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0;0;1" dur="5s" fill="freeze"/>
+    
+    <!-- Box background with animated gradient border -->
+    <rect x="180" y="395" width="440" height="110" rx="16" fill="#0d0d16" fill-opacity="0.8"/>
+    
+    <!-- Animated border -->
+    <rect x="180" y="395" width="440" height="110" rx="16" fill="none" stroke="url(#nameGradient)" stroke-width="1.5">
+      <animate attributeName="stroke-opacity" values="0.3;0.7;0.3" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Inner glow -->
+    <rect x="185" y="400" width="430" height="100" rx="14" fill="none" stroke="#E6B8FF" stroke-width="0.5" opacity="0.2"/>
+    
+    <!-- Status indicator -->
+    <circle cx="210" cy="425" r="5" fill="#6bcb77">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="210" cy="425" r="8" fill="none" stroke="#6bcb77" stroke-width="1" opacity="0">
+      <animate attributeName="r" values="5;12" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Status text -->
+    <text x="230" y="430" font-family="'Courier New', monospace" font-size="13" fill="#6bcb77" letter-spacing="1">
+      CURRENTLY BUILDING
+    </text>
+    
+    <!-- Project name -->
+    <text x="400" y="462" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="22" fill="#E6B8FF" font-weight="600" filter="url(#dreamyGlow)">
+      Rust AI Compiler
+    </text>
+    
+    <!-- Project description -->
+    <text x="400" y="488" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="13" fill="#6e7681" letter-spacing="1">
+      ⚡ Building intelligent compilation systems with Rust &amp; ML
+    </text>
+  </g>
+  
+  <!-- ═══════════════════════════════════════════════════════════════
+       BOTTOM DECORATIVE ELEMENTS
+       ═══════════════════════════════════════════════════════════════ -->
+  
+  <!-- Decorative lines -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0;0;0;0.5" dur="5.5s" fill="freeze"/>
+    
+    <line x1="100" y1="540" x2="320" y2="540" stroke="url(#nameGradient)" stroke-width="1">
+      <animate attributeName="x2" values="100;320" dur="1s" begin="5s" fill="freeze"/>
+    </line>
+    <line x1="480" y1="540" x2="700" y2="540" stroke="url(#nameGradient)" stroke-width="1">
+      <animate attributeName="x1" values="700;480" dur="1s" begin="5s" fill="freeze"/>
+    </line>
+  </g>
+  
+  <!-- Central diamond -->
+  <g transform="translate(400, 540)" opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0;0;0;0.8" dur="5.5s" fill="freeze"/>
+    
+    <polygon points="0,-15 15,0 0,15 -15,0" fill="none" stroke="url(#nameGradient)" stroke-width="1.5" filter="url(#dreamyGlow)">
+      <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="0;360" dur="20s" repeatCount="indefinite"/>
+    </polygon>
+    
+    <polygon points="0,-8 8,0 0,8 -8,0" fill="url(#nameGradient)" opacity="0.3">
+      <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" values="360;0" dur="15s" repeatCount="indefinite"/>
+    </polygon>
+    
+    <circle r="3" fill="#FFB8D4" filter="url(#ultraGlow)">
+      <animate attributeName="r" values="3;4;3" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Side floating dots -->
+  <circle cx="340" cy="540" r="3" fill="#E6B8FF" filter="url(#starGlow)" opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0;0;0;0.6" dur="5.5s" fill="freeze"/>
+    <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite" begin="5.5s"/>
+  </circle>
+  <circle cx="460" cy="540" r="3" fill="#B8D4FF" filter="url(#starGlow)" opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0;0;0;0.6" dur="5.5s" fill="freeze"/>
+    <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite" begin="6s"/>
+  </circle>
+  
+  <!-- ═══════════════════════════════════════════════════════════════
+       CORNER ACCENTS
+       ═══════════════════════════════════════════════════════════════ -->
+  
+  <!-- Top left corner -->
+  <g opacity="0.4">
+    <line x1="20" y1="20" x2="20" y2="60" stroke="#E6B8FF" stroke-width="1">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="4s" repeatCount="indefinite"/>
+    </line>
+    <line x1="20" y1="20" x2="60" y2="20" stroke="#E6B8FF" stroke-width="1">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="4s" repeatCount="indefinite"/>
+    </line>
+  </g>
+  
+  <!-- Top right corner -->
+  <g opacity="0.4">
+    <line x1="780" y1="20" x2="780" y2="60" stroke="#B8D4FF" stroke-width="1">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="4s" repeatCount="indefinite" begin="2s"/>
+    </line>
+    <line x1="780" y1="20" x2="740" y2="20" stroke="#B8D4FF" stroke-width="1">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="4s" repeatCount="indefinite" begin="2s"/>
+    </line>
+  </g>
+  
+  <!-- Bottom left corner -->
+  <g opacity="0.4">
+    <line x1="20" y1="580" x2="20" y2="540" stroke="#FFB8D4" stroke-width="1">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="4s" repeatCount="indefinite" begin="1s"/>
+    </line>
+    <line x1="20" y1="580" x2="60" y2="580" stroke="#FFB8D4" stroke-width="1">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="4s" repeatCount="indefinite" begin="1s"/>
+    </line>
+  </g>
+  
+  <!-- Bottom right corner -->
+  <g opacity="0.4">
+    <line x1="780" y1="580" x2="780" y2="540" stroke="#E6B8FF" stroke-width="1">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="4s" repeatCount="indefinite" begin="3s"/>
+    </line>
+    <line x1="780" y1="580" x2="740" y2="580" stroke="#E6B8FF" stroke-width="1">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="4s" repeatCount="indefinite" begin="3s"/>
+    </line>
+  </g>
+
 </svg>
