@@ -124,10 +124,19 @@
 
 <br/>
 
-<p align="center">
-  <img src="footer-signature.svg" width="100%" alt="System Signature" />
-</p>
+<div align="center">
 
+<!-- 
+  FLOATING AI ASSISTANT
+  SAVE THIS AS: ai-assistant.svg
+-->
+
+<img src="footer-signature.svg" width="80" alt="AI Assistant" />
+
+**💫 Always building, always learning, always dreaming in code 💫**
+
+
+</div>
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=kanchisaw03&style=for-the-badge&color=1a1a2e&label=SYSTEM+OBSERVERS" alt="Profile Views" />
 </p>
