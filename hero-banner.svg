@@ -1,0 +1,198 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" width="100%">
+  <defs>
+    <linearGradient id="cosmicGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a">
+        <animate attributeName="stop-color" values="#0d0d1a;#1a1a2e;#16213e;#0d0d1a" dur="12s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" style="stop-color:#1a1a2e">
+        <animate attributeName="stop-color" values="#1a1a2e;#2d1f3d;#1a1a2e;#16213e" dur="12s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#16213e">
+        <animate attributeName="stop-color" values="#16213e;#0d0d1a;#2d1f3d;#16213e" dur="12s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="starGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <linearGradient id="auroraGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E6B8FF;stop-opacity:0.15">
+        <animate attributeName="stop-opacity" values="0.1;0.25;0.1" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" style="stop-color:#FFB8D4;stop-opacity:0.2">
+        <animate attributeName="stop-opacity" values="0.15;0.3;0.15" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#B8D4FF;stop-opacity:0.15">
+        <animate attributeName="stop-opacity" values="0.1;0.25;0.1" dur="10s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <linearGradient id="nameGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E6B8FF">
+        <animate attributeName="stop-color" values="#E6B8FF;#FFB8D4;#B8D4FF;#E6B8FF" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" style="stop-color:#FFB8D4">
+        <animate attributeName="stop-color" values="#FFB8D4;#B8D4FF;#E6B8FF;#FFB8D4" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#B8D4FF">
+        <animate attributeName="stop-color" values="#B8D4FF;#E6B8FF;#FFB8D4;#B8D4FF" dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#E6B8FF;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#E6B8FF;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#cosmicGradient)"/>
+  
+  <!-- Aurora Effect -->
+  <ellipse cx="400" cy="650" rx="600" ry="400" fill="url(#auroraGrad)">
+    <animate attributeName="rx" values="600;700;600" dur="15s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- Center Glow -->
+  <ellipse cx="400" cy="240" rx="350" ry="180" fill="url(#centerGlow)">
+    <animate attributeName="rx" values="350;400;350" dur="10s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0.8;0.5" dur="8s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- Stars -->
+  <g fill="#ffffff" filter="url(#starGlow)">
+    <circle cx="80" cy="60" r="2.5">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="100" r="2">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="4s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
+    <circle cx="350" cy="50" r="2.5">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="3.5s" repeatCount="indefinite" begin="1s"/>
+    </circle>
+    <circle cx="500" cy="80" r="2">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="4s" repeatCount="indefinite" begin="0.3s"/>
+    </circle>
+    <circle cx="650" cy="45" r="2.5">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="3.2s" repeatCount="indefinite" begin="1.5s"/>
+    </circle>
+    <circle cx="720" cy="110" r="2">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="3.8s" repeatCount="indefinite" begin="0.8s"/>
+    </circle>
+    <circle cx="100" cy="450" r="2.5">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="4.2s" repeatCount="indefinite" begin="0.6s"/>
+    </circle>
+    <circle cx="700" cy="470" r="2">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="3.6s" repeatCount="indefinite" begin="1.2s"/>
+    </circle>
+  </g>
+  
+  <!-- Colored Stars -->
+  <g filter="url(#starGlow)">
+    <circle cx="150" cy="150" r="3" fill="#E6B8FF">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="3;4;3" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="130" r="3" fill="#FFB8D4">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="4.5s" repeatCount="indefinite" begin="1s"/>
+      <animate attributeName="r" values="3;4;3" dur="4.5s" repeatCount="indefinite" begin="1s"/>
+    </circle>
+    <circle cx="250" cy="470" r="3" fill="#B8D4FF">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="5.5s" repeatCount="indefinite" begin="0.5s"/>
+      <animate attributeName="r" values="3;4;3" dur="5.5s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
+    <circle cx="550" cy="450" r="3" fill="#E6B8FF">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="4.8s" repeatCount="indefinite" begin="1.5s"/>
+      <animate attributeName="r" values="3;4;3" dur="4.8s" repeatCount="indefinite" begin="1.5s"/>
+    </circle>
+  </g>
+  
+  <!-- Orbiting Particles -->
+  <circle r="4" fill="#FFB8D4" filter="url(#starGlow)">
+    <animateMotion dur="25s" repeatCount="indefinite">
+      <mpath href="#orbitPath"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="25s" repeatCount="indefinite"/>
+  </circle>
+  <path id="orbitPath" d="M 400 240 A 300 120 0 1 1 400 241 Z" fill="none"/>
+  
+  <!-- Wave Emoji -->
+  <text x="400" y="95" text-anchor="middle" font-size="50" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
+    👋
+  </text>
+  
+  <!-- Greeting Text -->
+  <text x="400" y="150" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="32" fill="#B8D4FF" letter-spacing="2" opacity="0">
+    <animate attributeName="opacity" values="0;0.9" dur="1.5s" fill="freeze"/>
+    Hi there, I'm
+  </text>
+  
+  <!-- Main Name -->
+  <text x="400" y="220" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="80" font-weight="300" fill="url(#nameGradient)" filter="url(#softGlow)" letter-spacing="6">
+    <animate attributeName="opacity" values="0;1" dur="2s" fill="freeze"/>
+    KANCHI SAW
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="290" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="26" fill="#E6B8FF" letter-spacing="4" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.9" dur="3s" fill="freeze"/>
+    FULL-STACK DEVELOPER
+  </text>
+  
+  <text x="400" y="330" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="22" fill="#FFB8D4" letter-spacing="3" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.85" dur="3.5s" fill="freeze"/>
+    Web3 Builder • Systems Programmer
+  </text>
+  
+  <!-- Location -->
+  <text x="400" y="375" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="18" fill="#6e7681" letter-spacing="2" opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0.7" dur="4s" fill="freeze"/>
+    📍 India
+  </text>
+  
+  <!-- Current Focus Box -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0;0.9" dur="4.5s" fill="freeze"/>
+    <rect x="200" y="400" width="400" height="90" rx="12" fill="#1a1a2e" stroke="#E6B8FF" stroke-width="1" opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <text x="400" y="430" text-anchor="middle" font-family="'Courier New', monospace" font-size="14" fill="#6bcb77">
+      🔭 CURRENTLY BUILDING
+    </text>
+    <text x="400" y="460" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="20" fill="#E6B8FF" font-weight="600">
+      Web3 Projects on Solana
+    </text>
+    <text x="400" y="482" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="14" fill="#6e7681">
+      🌱 Learning Solana Web3 Development
+    </text>
+  </g>
+  
+  <!-- Bottom Decorative Lines -->
+  <line x1="150" y1="510" x2="350" y2="510" stroke="url(#nameGradient)" stroke-width="2" opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0;0.5" dur="5s" fill="freeze"/>
+  </line>
+  <line x1="450" y1="510" x2="650" y2="510" stroke="url(#nameGradient)" stroke-width="2" opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0;0.5" dur="5s" fill="freeze"/>
+  </line>
+  
+  <!-- Central Diamond -->
+  <polygon points="400,500 418,518 400,536 382,518" fill="none" stroke="#FFB8D4" stroke-width="2" opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0;0.7" dur="5s" fill="freeze"/>
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite" begin="5s"/>
+  </polygon>
+</svg>
