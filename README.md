@@ -9,7 +9,7 @@
 -->
 
 <p align="center">
-  <img src="assets/hero-banner.svg" width="100%" alt="Kanchi Saw — Full-Stack Developer & Web3 Builder" />
+  <img src="hero-banner.svg" width="100%" alt="Kanchi Saw — Full-Stack Developer & Web3 Builder" />
 </p>
 
 <p align="center">
