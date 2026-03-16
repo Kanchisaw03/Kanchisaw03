@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="100%">
+  <defs>
+    <linearGradient id="pc1Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+    <linearGradient id="pc1Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#B8FFD4"/>
+      <stop offset="100%" style="stop-color:#98d4b8"/>
+    </linearGradient>
+    <filter id="pc1Glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="url(#pc1Bg)"/>
+  
+  <!-- Card -->
+  <rect x="30" y="20" width="740" height="280" rx="16" fill="#1a1a2e" stroke="url(#pc1Grad)" stroke-width="2" filter="url(#pc1Glow)">
+    <animate attributeName="stroke-opacity" values="0.5;0.9;0.5" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Status -->
+  <circle cx="730" cy="55" r="10" fill="#ffd93d">
+    <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="705" y="59" text-anchor="end" font-family="'Courier New', monospace" font-size="12" fill="#ffd93d">BUILDING</text>
+  
+  <!-- Icon -->
+  <g transform="translate(70, 70)">
+    <rect x="-30" y="-30" width="60" height="60" rx="12" fill="#1f3d2d"/>
+    <text y="8" text-anchor="middle" font-size="28">🔗</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="130" y="55" font-family="'Segoe UI', sans-serif" font-size="28" fill="#B8FFD4" font-weight="700">Web3 DApp on Solana</text>
+  <text x="130" y="85" font-family="'Segoe UI', sans-serif" font-size="18" fill="#6e7681">Decentralized application development</text>
+  
+  <!-- Description -->
+  <text x="50" y="140" font-family="'Segoe UI', sans-serif" font-size="18" fill="#c9d1d9">Building decentralized applications on Solana blockchain</text>
+  <text x="50" y="170" font-family="'Segoe UI', sans-serif" font-size="18" fill="#c9d1d9">with smart contracts and modern Web3 technologies.</text>
+  
+  <!-- Tech Tags -->
+  <g transform="translate(50, 205)">
+    <rect width="90" height="36" rx="8" fill="#1f3d2d" stroke="#B8FFD4" stroke-width="1"/>
+    <text x="45" y="24" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="16" fill="#B8FFD4">Solana</text>
+    
+    <rect x="105" width="80" height="36" rx="8" fill="#1f3d2d" stroke="#B8FFD4" stroke-width="1"/>
+    <text x="145" y="24" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="16" fill="#B8FFD4">Rust</text>
+    
+    <rect x="200" width="90" height="36" rx="8" fill="#1f3d2d" stroke="#B8FFD4" stroke-width="1"/>
+    <text x="245" y="24" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="16" fill="#B8FFD4">Web3.js</text>
+    
+    <rect x="305" width="80" height="36" rx="8" fill="#1f3d2d" stroke="#B8FFD4" stroke-width="1"/>
+    <text x="345" y="24" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="16" fill="#B8FFD4">React</text>
+  </g>
+  
+  <!-- Metrics -->
+  <g transform="translate(50, 265)">
+    <text font-family="'Courier New', monospace" font-size="16" fill="#6e7681">
+      <tspan>🌱 Currently Learning</tspan>
+      <tspan dx="30" fill="#B8FFD4">Solana Web3 Development</tspan>
+    </text>
+  </g>
+</svg>
